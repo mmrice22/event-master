@@ -1,6 +1,6 @@
 <app-header></app-header>
 <div class="container">
-  <form>
+  <form #eventForm="ngForm" (ngSubmit)="search(eventForm)">
     <label for="location">Location</label>
     <input
       type="text"

@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { TicketmasterService } from "../ticketmaster.service";
+import { Router } from "@angular/router";
+import { NgForm } from "@angular/forms";
 
 @Component({
   selector: "app-search-criteria",
@@ -7,7 +9,7 @@ import { TicketmasterService } from "../ticketmaster.service";
   styleUrls: ["./search-criteria.component.css"]
 })
 export class SearchCriteriaComponent implements OnInit {
-  constructor(private service: TicketmasterService) {}
+  constructor(private service: TicketmasterService, private router: Router) {}
 
   ngOnInit(): void {
     this.getData();
@@ -15,7 +17,12 @@ export class SearchCriteriaComponent implements OnInit {
 
   getData() {
     this.service.getData("detroit").subscribe(response => {
-      console.log(response);
+      // console.log(response);
+    });
+  }
+  search(form: NgForm) {
+    this.router.navigate(["eventlist"], {
+      queryParams: { city: form.value.city }
     });
   }
 }
