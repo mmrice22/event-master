@@ -1,1 +1,24 @@
-<p>search-criteria works!</p>
+<app-header></app-header>
+<div class="container">
+  <form>
+    <label for="location">Location</label>
+    <input
+      type="text"
+      id="location"
+      name="location"
+      placeholder="enter location"
+      ngModel
+    />
+    <label for="event">Event</label>
+    <input
+      type="text"
+      id="event"
+      name="event"
+      placeholder="event name"
+      ngModel
+    />
+    <label for="date">Dates</label>
+    <input type="text" id="date" name="date" placeholder="enter date" ngModel />
+    <button>Search</button>
+  </form>
+</div>
