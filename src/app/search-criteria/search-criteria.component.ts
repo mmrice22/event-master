@@ -22,7 +22,7 @@ export class SearchCriteriaComponent implements OnInit {
   }
   search(form: NgForm) {
     this.router.navigate(["eventlist"], {
-      queryParams: { city: form.value.city }
+      queryParams: { city: form.value.location }
     });
   }
 }
