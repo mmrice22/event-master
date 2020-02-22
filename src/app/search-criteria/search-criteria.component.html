@@ -1,24 +1,33 @@
 <app-header></app-header>
 <div class="container">
   <form #eventForm="ngForm" (ngSubmit)="search(eventForm)">
-    <label for="location">Location</label>
+    <label class="title" for="location">Location</label>
     <input
       type="text"
       id="location"
       name="location"
       placeholder="enter location"
+      class="field"
       ngModel
     />
-    <label for="event">Event</label>
+    <label class="title" for="event">Event</label>
     <input
       type="text"
       id="event"
       name="event"
       placeholder="event name"
+      class="field"
       ngModel
     />
-    <label for="date">Dates</label>
-    <input type="date" id="date" name="date" placeholder="enter date" ngModel />
+    <label class="title" for="date">Dates</label>
+    <input
+      type="date"
+      id="date"
+      name="date"
+      placeholder="enter date"
+      class="field"
+      ngModel
+    />
     <button>Search</button>
   </form>
 </div>
