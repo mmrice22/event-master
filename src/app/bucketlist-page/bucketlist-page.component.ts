@@ -13,4 +13,8 @@ export class BucketlistPageComponent implements OnInit {
   ngOnInit(): void {
     this.favorites = this.service.getFavorites();
   }
+
+  deleteFavorite(favorite: any) {
+    this.service.deleteFavorite(favorite);
+  }
 }

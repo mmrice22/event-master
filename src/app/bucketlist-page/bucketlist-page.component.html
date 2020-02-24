@@ -3,6 +3,9 @@
   <div class="container">
     <div class="events" *ngFor="let event of favorites">
       <p class="name">{{ event?.name }}</p>
+      <button (click)="deleteFavorite(event)">
+        <i class="fas fa-heart-broken"></i>
+      </button>
     </div>
   </div>
 </div>
