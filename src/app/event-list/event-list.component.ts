@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
-// import { Route } from "@angular/compiler/src/core";
 import { TicketmasterService } from "../ticketmaster.service";
 
 @Component({
@@ -12,7 +11,7 @@ export class EventListComponent implements OnInit {
   events: any;
   constructor(
     private route: ActivatedRoute,
-    private service: TicketmasterService // private router: Route
+    private service: TicketmasterService
   ) {}
 
   ngOnInit(): void {
@@ -23,5 +22,10 @@ export class EventListComponent implements OnInit {
         console.log(data["_embedded"].events);
       });
     });
+  }
+
+  addToFavorites(favorite: any) {
+    this.service.addToFavorites(favorite);
+    // console.log(favorite);
   }
 }

@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.events {
+  border: 1px solid black;
+  width: calc(99.9% / 4);
+  height: 100px;
+}

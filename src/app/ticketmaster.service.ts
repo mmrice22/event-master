@@ -7,6 +7,7 @@ import { HttpClient } from "@angular/common/http";
 export class TicketmasterService {
   apiKey: string = "hKZPfVjGljI71w2BXGFOnqJX296h5pVR";
   apiUrl: string = "https://app.ticketmaster.com/discovery/v2/events.json?";
+  favorites: any[] = [];
   constructor(private http: HttpClient) {}
 
   // methods
@@ -23,5 +24,13 @@ export class TicketmasterService {
     return this.http.get(this.apiUrl, {
       params: params
     });
+  }
+
+  addToFavorites(favorite: any) {
+    this.favorites.push(favorite);
+  }
+
+  getFavorites() {
+    return this.favorites;
   }
 }
