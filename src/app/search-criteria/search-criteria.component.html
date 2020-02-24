@@ -1,12 +1,12 @@
 <app-header></app-header>
 <div class="container">
   <form #eventForm="ngForm" (ngSubmit)="search(eventForm)">
-    <label class="title" for="location">Location</label>
+    <label class="title" for="city">City</label>
     <input
       type="text"
-      id="location"
-      name="location"
-      placeholder="enter location"
+      id="city"
+      name="city"
+      placeholder="enter a city"
       class="field"
       ngModel
     />
@@ -15,7 +15,7 @@
       type="text"
       id="event"
       name="event"
-      placeholder="event name"
+      placeholder="event type"
       class="field"
       ngModel
     />

@@ -10,7 +10,7 @@ export class TicketmasterService {
   constructor(private http: HttpClient) {}
 
   // methods
-  getData(searchedCity: string) {
+  getData(searchedCity: string, keyword: string) {
     return this.http.get(this.apiUrl, {
       params: { apikey: this.apiKey, city: searchedCity }
     });
