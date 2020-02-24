@@ -12,14 +12,14 @@ export class SearchCriteriaComponent implements OnInit {
   constructor(private service: TicketmasterService, private router: Router) {}
 
   ngOnInit(): void {
-    this.getData();
+    // this.getData();
   }
 
-  getData() {
-    this.service.getData("detroit").subscribe(response => {
-      // console.log(response);
-    });
-  }
+  // getData() {
+  //   this.service.getData("detroit").subscribe(response => {
+  //     console.log(response);
+  //   });
+  // }
   search(form: NgForm) {
     this.router.navigate(["eventlist"], {
       queryParams: { city: form.value.location }

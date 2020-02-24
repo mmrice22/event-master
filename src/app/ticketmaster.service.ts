@@ -7,13 +7,12 @@ import { HttpClient } from "@angular/common/http";
 export class TicketmasterService {
   apiKey: string = "hKZPfVjGljI71w2BXGFOnqJX296h5pVR";
   apiUrl: string = "https://app.ticketmaster.com/discovery/v2/events.json?";
-  city: string;
   constructor(private http: HttpClient) {}
 
   // methods
-  getData(searchWord: string = "") {
+  getData(searchedCity: string) {
     return this.http.get(this.apiUrl, {
-      params: { apikey: this.apiKey, keyword: searchWord, city: this.city }
+      params: { apikey: this.apiKey, city: searchedCity }
     });
   }
 }
