@@ -3,7 +3,7 @@
   <div class="container">
     <div class="events" *ngFor="let event of events">
       <p class="name">{{ event?.name }}</p>
-      <!-- <p class="info">{{ event?.info }}</p> -->
+      <!-- <p>{{ event.info }}</p> -->
       <button (click)="addToFavorites(event)">
         <i class="fas fa-heart"></i>
       </button>
