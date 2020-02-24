@@ -14,6 +14,7 @@ export class TicketmasterService {
   getData(queryParams: any) {
     let params: any = {
       apikey: this.apiKey
+      // sort: "date,asc"
     };
     if (queryParams.city) {
       params.city = queryParams.city;
@@ -21,6 +22,12 @@ export class TicketmasterService {
     if (queryParams.keyword) {
       params.keyword = queryParams.keyword;
     }
+    // if (queryParams.startDateTime) {
+    //   params.startDateTime = queryParams.startDateTime + "T00:00:00Z";
+    // }
+    // if (queryParams.endDateTime) {
+    //   params.endDateTime = queryParams.endDateTime + "T00:00:00Z";
+    // }
     return this.http.get(this.apiUrl, {
       params: params
     });
