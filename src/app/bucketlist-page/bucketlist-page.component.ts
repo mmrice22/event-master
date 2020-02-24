@@ -14,7 +14,7 @@ export class BucketlistPageComponent implements OnInit {
     this.favorites = this.service.getFavorites();
   }
 
-  deleteFavorite(favorite: any) {
-    this.service.deleteFavorite(favorite);
+  deleteFavorite(index: number) {
+    this.service.deleteFavorite(index);
   }
 }

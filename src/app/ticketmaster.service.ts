@@ -34,7 +34,7 @@ export class TicketmasterService {
     return this.favorites;
   }
 
-  deleteFavorite(favorite: any) {
-    this.favorites.splice(favorite);
+  deleteFavorite(favorite: number) {
+    this.favorites.splice(favorite, 1);
   }
 }
