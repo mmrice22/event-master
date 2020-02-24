@@ -11,18 +11,18 @@ import { NgForm } from "@angular/forms";
 export class SearchCriteriaComponent implements OnInit {
   constructor(private service: TicketmasterService, private router: Router) {}
 
-  ngOnInit(): void {
-    // this.getData();
-  }
+  ngOnInit(): void {}
 
-  // getData() {
-  //   this.service.getData("detroit").subscribe(response => {
-  //     console.log(response);
-  //   });
-  // }
   search(form: NgForm) {
+    let params: any = {};
+    if (form.value.city) {
+      params.city = form.value.city;
+    }
+    if (form.value.event) {
+      params.keyword = form.value.event;
+    }
     this.router.navigate(["eventlist"], {
-      queryParams: { city: form.value.city }
+      queryParams: params
     });
   }
 }

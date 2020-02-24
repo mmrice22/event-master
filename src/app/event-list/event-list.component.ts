@@ -17,8 +17,8 @@ export class EventListComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(response => {
-      console.log(response.city);
-      this.service.getData(response.city).subscribe(data => {
+      console.log(response);
+      this.service.getData(response).subscribe(data => {
         this.events = data["_embedded"].events;
         console.log(data["_embedded"].events);
       });
