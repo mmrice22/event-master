@@ -9,6 +9,7 @@ import { TicketmasterService } from "../ticketmaster.service";
 })
 export class EventListComponent implements OnInit {
   events: any;
+  showIndex: number;
   constructor(
     private route: ActivatedRoute,
     private service: TicketmasterService
@@ -27,5 +28,9 @@ export class EventListComponent implements OnInit {
   addToFavorites(favorite: any) {
     this.service.addToFavorites(favorite);
     // console.log(favorite);
+  }
+
+  showMore(index: number) {
+    this.showIndex = index;
   }
 }

@@ -1,12 +1,20 @@
 <app-header></app-header>
 <div class="wrapper">
   <div class="container">
-    <div class="events" *ngFor="let event of events">
+    <div
+      class="events"
+      *ngFor="let event of events; index as i"
+      (click)="showMore(i)"
+    >
       <p class="name">{{ event?.name }}</p>
-      <!-- <p>{{ event.info }}</p> -->
+
       <button (click)="addToFavorites(event)">
         <i class="fas fa-heart"></i>
       </button>
+      <div class="infoDiv" *ngIf="showIndex === i">
+        <p *ngIf="event.info">{{ event.info }}</p>
+        <p *ngIf="!event.info">No more Info</p>
+      </div>
     </div>
   </div>
 </div>
