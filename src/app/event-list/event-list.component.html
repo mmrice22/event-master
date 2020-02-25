@@ -1,12 +1,8 @@
 <app-header></app-header>
 <div class="wrapper">
   <ul class="container">
-    <li
-      class="events"
-      *ngFor="let event of events; index as i"
-      (click)="showMore(i)"
-    >
-      <p class="name">{{ event?.name }}</p>
+    <li class="events" *ngFor="let event of events; index as i">
+      <p class="name" (click)="showMore(i)">{{ event?.name }}</p>
 
       <button (click)="addToFavorites(event)">
         <i class="fas fa-heart"></i>
