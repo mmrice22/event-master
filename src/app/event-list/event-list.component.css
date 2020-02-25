@@ -1,5 +1,6 @@
 .wrapper {
   display: flex;
+  flex-direction: row;
 }
 
 .container {
@@ -10,25 +11,19 @@
 
 .events {
   margin: 20px;
-  box-shadow: 2px 10px 10px rgba(255, 0, 0, 0.16),
-    0 3px 6px rgba(255, 0, 0, 0.23);
   height: 150px;
   padding: 10px;
   width: 200px;
-  border-radius: 10px;
   position: relative;
-  background: linear-gradient(red, black);
-  list-style: none;
 }
 
 .infoDiv {
   width: 225px;
   height: 150px;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50;
+  left: 50;
   overflow: scroll;
-  background: linear-gradient(red, black);
   border-radius: 10px;
 }
 
@@ -41,10 +36,61 @@ button {
   box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgb(0, 0, 0);
   border-radius: 10px;
   position: absolute;
-  right: -10px;
-  bottom: 0px;
+  left: -30px;
+  top: 25px;
 }
 
-p {
-  color: azure;
+@media (min-width: 768px) {
+  .wrapper {
+    display: flex;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .events {
+    margin: 20px;
+    box-shadow: 2px 10px 10px rgba(255, 0, 0, 0.16),
+      0 3px 6px rgba(255, 0, 0, 0.23);
+    height: 150px;
+    padding: 10px;
+    width: 200px;
+    border-radius: 10px;
+    position: relative;
+    background: linear-gradient(red, black);
+    list-style: none;
+  }
+
+  .infoDiv {
+    width: 225px;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: scroll;
+    background: linear-gradient(red, black);
+    border-radius: 10px;
+  }
+
+  .fa-frown {
+    color: red;
+  }
+
+  button {
+    color: red;
+    box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgb(0, 0, 0);
+    border-radius: 10px;
+    position: absolute;
+    right: -10px;
+    bottom: 0px;
+    top: unset;
+    left: unset;
+  }
+
+  p {
+    color: azure;
+  }
 }
