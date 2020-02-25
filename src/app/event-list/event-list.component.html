@@ -13,7 +13,9 @@
       </button>
       <div class="infoDiv" *ngIf="showIndex === i">
         <p *ngIf="event.info">{{ event.info }}</p>
-        <p *ngIf="!event.info">No more Info</p>
+        <p *ngIf="event.info">Date: {{ event.dates.start.localDate }}</p>
+        <p *ngIf="!event.info">No extra information provided</p>
+        <p *ngIf="!event.info">Date: {{ event.dates.start.localDate }}</p>
         <p *ngIf="!event.info"><i class="far fa-frown"></i></p>
       </div>
     </div>
