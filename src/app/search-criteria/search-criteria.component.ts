@@ -21,11 +21,11 @@ export class SearchCriteriaComponent implements OnInit {
     if (form.value.event) {
       params.keyword = form.value.event;
     }
-    if (form.value.startDate) {
-      params.startDate = form.value.startDate;
+    if (form.value.startDateTime) {
+      params.startDateTime = form.value.startDateTime;
     }
-    if (form.value.endDate) {
-      params.endDate = form.value.endDate;
+    if (form.value.endDateTime) {
+      params.endDateTime = form.value.endDateTime;
     }
     this.router.navigate(["eventlist"], {
       queryParams: params
