@@ -14,11 +14,6 @@ a {
   display: none;
 }
 
-#dropdown {
-  background-color: red;
-  color: white;
-}
-
 .container {
   background-color: black;
 }
@@ -38,14 +33,20 @@ h1 {
 
 .mobile {
   size: 50px;
-  background-color: red;
-  border-radius: 10px;
+  background-color: black;
+  border: none;
   padding: 5px;
 }
 
 .love {
   display: flex;
   flex-direction: column;
+}
+
+.fa-bars {
+  background-color: black;
+  color: red;
+  font-size: 20px;
 }
 
 @media (min-width: 768px) {
