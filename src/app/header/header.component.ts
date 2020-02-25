@@ -6,17 +6,16 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./header.component.css"]
 })
 export class HeaderComponent implements OnInit {
-  public show: boolean = false;
-  public buttonName: any = "Show";
+  showNav: boolean = true;
 
   constructor() {}
 
   ngOnInit(): void {}
 
   toggle() {
-    this.show = !this.show;
+    this.showNav = !this.showNav;
 
-    if (this.show) this.buttonName = "Hide";
-    else this.buttonName = "Show";
+    // if (this.show) this.buttonName = "Hide";
+    // else this.buttonName = "Show";
   }
 }

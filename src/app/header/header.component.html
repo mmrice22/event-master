@@ -12,10 +12,10 @@
       <a routerLink="/bucketlist" class="button">Favorites</a>
       <a routerLink="/eventlist" class="button">Events</a>
     </ul>
-    <button class="mobile" (click)="toggle()">
+    <button class="mobile" (click)="toggle()" *ngIf="showNav">
       <i class="fas fa-bars"></i>
     </button>
-    <div *ngIf="show">
+    <div *ngIf="!showNav" class="test">
       <a class="love" routerLink="/search">Home</a>
       <a class="love" routerLink="/bucketlist">Favorites</a>
       <a class="love" routerLink="/eventlist">Events</a>
