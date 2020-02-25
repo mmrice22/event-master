@@ -12,11 +12,9 @@
   margin: 20px;
   box-shadow: 2px 10px 10px rgba(255, 0, 0, 0.16),
     0 3px 6px rgba(255, 0, 0, 0.23);
-  width: calc(99.9% / 4);
-  height: 100px;
+  height: 150px;
   padding: 10px;
-  height: 20vh;
-  width: 20vw;
+  width: 200px;
   border-radius: 10px;
   position: relative;
 }
