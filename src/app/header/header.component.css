@@ -43,7 +43,7 @@ h1 {
   padding: 5px;
 }
 
-a {
+.love {
   display: flex;
   flex-direction: column;
 }
