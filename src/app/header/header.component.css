@@ -36,6 +36,13 @@ h1 {
   font-size: large;
 }
 
+.mobile {
+  size: 50px;
+  background-color: red;
+  border-radius: 10px;
+  padding: 5px;
+}
+
 @media (min-width: 768px) {
   .navbar {
     display: flex;
@@ -72,6 +79,10 @@ h1 {
 
   .master {
     color: red;
+  }
+
+  .mobile {
+    display: none;
   }
 
   .event {

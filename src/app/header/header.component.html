@@ -10,11 +10,14 @@
       <a routerLink="/bucketlist" class="button">Favorites</a>
       <a routerLink="/eventlist" class="button">Events</a>
     </ul>
-    <select id="dropdown">
-      <option value="Select One">Select One</option>
-      <option value="Home">Home</option>
-      <option value="Favorites">Favorites</option>
-    </select>
+    <button class="mobile" (click)="toggle()">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div *ngIf="show">
+      <a routerLink="/search">Home</a>
+      <a routerLink="/bucketlist">Favorites</a>
+      <a routerLink="/eventlist">Events</a>
+    </div>
   </nav>
 </div>
 
