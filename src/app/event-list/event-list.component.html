@@ -1,7 +1,7 @@
 <app-header></app-header>
 <div class="wrapper">
-  <div class="container">
-    <div
+  <ul class="container">
+    <li
       class="events"
       *ngFor="let event of events; index as i"
       (click)="showMore(i)"
@@ -18,6 +18,6 @@
         <p *ngIf="!event.info">Date: {{ event.dates.start.localDate }}</p>
         <p *ngIf="!event.info"><i class="far fa-frown"></i></p>
       </div>
-    </div>
-  </div>
+    </li>
+  </ul>
 </div>
