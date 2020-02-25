@@ -17,6 +17,7 @@
   width: 200px;
   border-radius: 10px;
   position: relative;
+  background: linear-gradient(red, black);
 }
 
 .infoDiv {
@@ -26,7 +27,8 @@
   top: 0;
   left: 0;
   overflow: scroll;
-  background-color: white;
+  background: linear-gradient(red, black);
+  border-radius: 10px;
 }
 
 button {
@@ -36,4 +38,8 @@ button {
   position: absolute;
   right: -10px;
   bottom: 0px;
+}
+
+p {
+  color: azure;
 }
