@@ -9,22 +9,28 @@
   flex-wrap: wrap;
 }
 
+.name {
+  font-family: "Abril Fatface";
+}
+
 .events {
   margin: 20px;
   height: 150px;
   padding: 10px;
   width: 200px;
   position: relative;
+  font-family: "Pragati Narrow";
 }
 
 .infoDiv {
-  width: 225px;
+  width: 200px;
   height: 150px;
   position: absolute;
   top: 50;
   left: 50;
   overflow: scroll;
   border-radius: 10px;
+  margin-left: 5px;
 }
 
 .fa-frown {
@@ -79,7 +85,7 @@ button {
   }
 
   .fa-frown {
-    color: red;
+    color: white;
   }
 
   button {

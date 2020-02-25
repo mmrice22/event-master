@@ -9,6 +9,10 @@
   flex-wrap: wrap;
 }
 
+.name {
+  font-family: "Abril Fatface";
+}
+
 .events {
   margin: 20px;
   height: 150px;
@@ -16,6 +20,7 @@
   width: 200px;
   position: relative;
   list-style: none;
+  font-family: "Pragati Narrow";
 }
 
 a {
