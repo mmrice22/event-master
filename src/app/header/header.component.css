@@ -5,10 +5,16 @@
   height: 70px;
   align-items: center;
   width: 100%;
+  font-family: "Righteous";
 }
 a {
   text-decoration: none;
   color: azure;
+}
+
+a:hover {
+  background-color: white;
+  color: red;
 }
 
 ul {
