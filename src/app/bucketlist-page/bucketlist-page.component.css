@@ -17,6 +17,7 @@
   width: 200px;
   border-radius: 10px;
   position: relative;
+  list-style: none;
 }
 
 a {

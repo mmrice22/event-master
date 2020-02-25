@@ -1,7 +1,7 @@
 <app-header></app-header>
 <div class="wrapper">
-  <div class="container">
-    <div class="events" *ngFor="let event of favorites; index as i">
+  <ul class="container">
+    <li class="events" *ngFor="let event of favorites; index as i">
       <p class="name">{{ event?.name }}</p>
       <p>
         <a href="{{ event.url }}">Go to TicketMaster </a>
@@ -11,6 +11,6 @@
       <button (click)="deleteFavorite(i)">
         <i class="fas fa-heart-broken"></i>
       </button>
-    </div>
-  </div>
+    </li>
+  </ul>
 </div>
