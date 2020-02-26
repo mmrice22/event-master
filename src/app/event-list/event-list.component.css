@@ -36,10 +36,12 @@
   height: 100%;
   width: 100%;
   color: white;
-  text-align: center;
+  /* text-align: center; */
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
   font-weight: bold;
   position: absolute;
-
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -o-backface-visibility: hidden;
@@ -48,12 +50,18 @@
 .card .front {
   background: linear-gradient(red, black);
   border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   padding: 5px;
 }
 .card .back {
   background: linear-gradient(red, black);
   border-radius: 10px;
   overflow: scroll;
+  text-align: center;
+  align-items: center;
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
   -o-transform: rotateY(180deg);
