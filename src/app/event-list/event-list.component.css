@@ -79,7 +79,7 @@ button {
 .fa-frown {
   display: flex;
   justify-content: center;
-  color: red;
+  color: white;
   font-size: 50px;
   z-index: 3;
 }
