@@ -10,6 +10,8 @@ import { TicketmasterService } from "../ticketmaster.service";
 export class EventListComponent implements OnInit {
   events: any;
   showIndex: number;
+  flipped: boolean = false;
+
   constructor(
     private route: ActivatedRoute,
     private service: TicketmasterService
@@ -30,7 +32,15 @@ export class EventListComponent implements OnInit {
     // console.log(favorite);
   }
 
-  showMore(index: number) {
-    this.showIndex = index;
+  // showMore(index: number) {
+  //   this.showIndex = index;
+  // }
+
+  showMore(event: any) {
+    if (event.isClicked) {
+      event.isClicked = false;
+    } else {
+      event.isClicked = true;
+    }
   }
 }

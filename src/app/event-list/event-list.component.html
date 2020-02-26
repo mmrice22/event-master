@@ -1,13 +1,36 @@
 <app-header></app-header>
 <div class="wrapper">
-  <ul class="container">
+  <!-- <ul class="container">
     <li class="events" *ngFor="let event of events; index as i">
-      <p class="name" (click)="showMore(i)">{{ event?.name }}</p>
+      <p
+        class="name"
+        [ngClass]="event.isClicked ? 'flipped' : ''"
+        (click)="showMore(event)"
+      >
+        {{ event?.name }}
+      </p> -->
 
-      <button (click)="addToFavorites(event)">
-        <i class="fas fa-heart"></i>
-      </button>
-      <div class="infoDiv" *ngIf="showIndex === i">
+  <section class="container" *ngFor="let event of events; index as i">
+    <button (click)="addToFavorites(event)">
+      <i class="fas fa-heart"></i>
+    </button>
+    <div
+      class="card"
+      [ngClass]="{ flipped: event.isClicked }"
+      (click)="showMore(event)"
+    >
+      <div class="front">{{ event.name }}</div>
+      <div class="back">
+        <p *ngIf="event.info">{{ event.info }}</p>
+        <p *ngIf="event.info">Date: {{ event.dates.start.localDate }}</p>
+        <p *ngIf="!event.info">Date: {{ event.dates.start.localDate }}</p>
+        <p *ngIf="!event.info">No extra information provided</p>
+        <p *ngIf="!event.info"><i class="far fa-frown"></i></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- <div class="infoDiv" *ngIf="showIndex === i">
         <p *ngIf="event.info">{{ event.info }}</p>
         <p *ngIf="event.info">Date: {{ event.dates.start.localDate }}</p>
         <p *ngIf="!event.info">Date: {{ event.dates.start.localDate }}</p>
@@ -15,5 +38,5 @@
         <p *ngIf="!event.info"><i class="far fa-frown"></i></p>
       </div>
     </li>
-  </ul>
+  </ul> -->
 </div>
