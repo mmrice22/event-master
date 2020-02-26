@@ -5,6 +5,12 @@
   margin: 20px;
 }
 
+h3 {
+  color: black;
+  text-align: center;
+  font-family: "Monoton";
+}
+
 .container {
   display: flex;
   width: 200px;
