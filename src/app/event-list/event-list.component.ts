@@ -32,10 +32,6 @@ export class EventListComponent implements OnInit {
     // console.log(favorite);
   }
 
-  // showMore(index: number) {
-  //   this.showIndex = index;
-  // }
-
   showMore(event: any) {
     if (event.isClicked) {
       event.isClicked = false;

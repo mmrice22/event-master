@@ -7,11 +7,16 @@
       <p>
         <a href="{{ event.url }}">Go to TicketMaster </a>
         <!-- <a [href]="event.url">Go to TicketMaster</a> -->
+        <button (click)="deleteFavorite(i)">
+          <i class="fas fa-heart-broken"></i>
+        </button>
       </p>
+    </li>
 
-      <button (click)="deleteFavorite(i)">
-        <i class="fas fa-heart-broken"></i>
-      </button>
+    <li class="noFave" *ngIf="favorites.length === 0">
+      <p class="noFave">
+        You have no favorites yet <i class="fas fa-heart-broken"></i>
+      </p>
     </li>
   </ul>
 </div>

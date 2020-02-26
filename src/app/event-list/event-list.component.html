@@ -1,16 +1,6 @@
 <app-header></app-header>
 <h3>Your Searched Events</h3>
 <div class="wrapper">
-  <!-- <ul class="container">
-    <li class="events" *ngFor="let event of events; index as i">
-      <p
-        class="name"
-        [ngClass]="event.isClicked ? 'flipped' : ''"
-        (click)="showMore(event)"
-      >
-        {{ event?.name }}
-      </p> -->
-
   <section class="container" *ngFor="let event of events; index as i">
     <button (click)="addToFavorites(event)">
       <i class="fas fa-heart"></i>
